@@ -1,0 +1,25 @@
+html{
+    scroll-behavior: smooth;
+    /* le comportement du scroll soit smooth, ça remonte pas direct */
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.4;
+    font-size: 18px;
+
+    /* a supprimer */
+    height: 3000px;
+}
+
+.backToTop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none; /*pour qu'il s'affiche pas puis qu'en JS il s'affiche après être descendu un peu*/
+}
+
+.backToTop--show{
+    display: inline;
+}
