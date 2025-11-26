@@ -4,6 +4,11 @@ body{
     /* pour simuler le scroll */
 }
 
+.tab{
+    padding: 0 10%;
+    margin-bottom: 20px;
+}
+
 .tab__nav {
     display: flex;
     gap: 10px;
@@ -11,18 +16,53 @@ body{
     margin: 0;
     padding: 0;
 }
-.tab__el {
+.tab__el a{
+    display: block;
     padding: 10px;
 }
 
-.tab__content {
-    display: none;
+.tab__container{
+    background-color: #f4efe0;
 }
-.tab__content--active{
-    display: block;
+
+.tab__content{
+    padding: 10px;
 }
-.tab__el--active{
-    background-color: white;
-    color: blue;
-    border: blue solid 3px;
+
+.tab__el--active a{
+    background-color: #f4efe0;
+    color: rgb(237, 141, 210);
+    border: rgb(237, 141, 210) solid 3px;
+}
+
+.tab--a{
+    .tab__container{
+        position: relative;
+        overflow: hidden;
+        transition: height 0.3s;
+    }
+    .tab__content{
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .tab__content--active{
+        opacity: 1;
+    }
+}
+
+.tab--b{
+    .tab__container{
+        position: relative;
+        overflow: hidden;
+        transition: height 0.3s;
+    }
+    .tab__content{
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .tab__content--active{
+        opacity: 1;
+    }
 }
