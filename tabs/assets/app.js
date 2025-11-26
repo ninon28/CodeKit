@@ -29,12 +29,12 @@ function tabTrigger(event){
 
     if(parentTab.classList.contains("tab--a")){
         const tabContainerA = document.querySelector(".tab--a .tab__container");
-        tabContainerA.style.height = tabSelect.offsetHeight + "px"; //offset inclu la taille avec les paddings
+        tabContainerA.style.height = tabSelect.offsetHeight + "px";
     }
 
     if(parentTab.classList.contains("tab--b")){
         const tabContainerB = document.querySelector(".tab--b .tab__container");
-        tabContainerB.style.height = tabSelect.offsetHeight + "px"; //offset inclu la taille avec les paddings
+        tabContainerB.style.height = tabSelect.offsetHeight + "px";
     }
 }
 
