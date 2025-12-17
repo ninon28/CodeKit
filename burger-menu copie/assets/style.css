@@ -11,7 +11,7 @@ body{
     .menu__toggle{
         position: fixed;
         top: 20px;
-        left: 20px;
+        left: 0;
         cursor: pointer;
         z-index: 20; /*pour le mettre au dessus sur les couches, travailler avec des dizaines pour si on doit intercaller des couches après*/
     }
