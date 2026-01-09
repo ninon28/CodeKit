@@ -36,6 +36,11 @@ function tabTrigger(event){
         const tabContainerB = document.querySelector(".tab--b .tab__container");
         tabContainerB.style.height = tabSelect.offsetHeight + "px";
     }
+
+    if(parentTab.classList.contains("tab--c")){
+        const tabContainerC = document.querySelector(".tab--c .tab__container");
+        tabContainerC.style.height = tabSelect.offsetHeight + "px";
+    }
 }
 
 // définir la taille du container par rapport à la tab active
@@ -49,3 +54,9 @@ const activeTabB = document.querySelector(".tab--b .tab__content--active");
 const tabContainerB = document.querySelector(".tab--b .tab__container");
 
 tabContainerB.style.height = activeTabB.offsetHeight + "px"; //offset inclu la taille avec les paddings
+
+// tabs C
+const activeTabC = document.querySelector(".tab--c .tab__content--active");
+const tabContainerC = document.querySelector(".tab--c .tab__container");
+
+tabContainerC.style.height = activeTabC.offsetHeight + "px"; //offset inclu la taille avec les paddings

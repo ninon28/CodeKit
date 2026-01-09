@@ -72,3 +72,32 @@ body{
         transform: translateX(-100%);
     }
 }
+
+.tab--c{
+    .tab__container{
+        position: relative;
+        overflow: hidden;
+        transition: height 0.3s;
+    }
+    .tab__content1{
+        background-color: #f3bfea;
+    }
+    .tab__content2{
+        background-color: #f6a4e8;
+    }
+    .tab__content3{
+        background-color: #f872e1;
+    }
+    .tab__content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s;
+    }
+    .tab__content--active ~ .tab__content{
+        transform: translateY(-100%);
+    }
+    :has(~.tab__content--active){
+        transform: translateY(100%);
+    }
+}
