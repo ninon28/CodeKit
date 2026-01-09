@@ -8,30 +8,59 @@ body{
 
 /* burger menu que sur téléphone*/
 @media (max-width: 600px) {
-    .menu__toggle{
+    .menu{
         position: fixed;
-        top: 20px;
-        left: 0;
-        cursor: pointer;
-        z-index: 20; /*pour le mettre au dessus sur les couches, travailler avec des dizaines pour si on doit intercaller des couches après*/
+        z-index: 20;
+        top: 0;
     }
-    .menu__liste{
+
+    .menu__toggle {
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 200px;
+        padding: 16px;
+        z-index: 20;
+    }
+
+    .menu__container {
         display: flex;
-        justify-content: space-around;
+        overflow: hidden;
+        border-radius: 100px;
+        width: 65px;
+        height: 52px;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .menu__liste {
+        display: flex;
+        justify-content: space-evenly;
         list-style: none;
-        position: fixed;
-        top: 20px;
-        right: 0;
-        width: 80%;
-        height: 21px;
-        background-color: indianred;
-        margin: 0; /* car le ul a un margin par défaut*/
-        z-index: 10;
+        width: 100%;
+        margin: 0 0 0 -66px;
+        padding: 11px 11px 11px 66px;
+        background-color: #C1B0D9;
+        border-radius: 100px;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
+        transition: width 0.3s ease-in-out;
     }
-    .menu--open .menu__liste{
-        transform: translateX(0);
+
+    .menu__el--actif{
+        color: #6B538C;
+        font-weight: 500;
+    }
+
+    .menu--open{
+        position: fixed;
+        z-index: 20;
+        .menu__container{
+            width: 400px;
+        }
+        .menu__liste {
+            border: 2px solid #C1B0D9;
+            background-color: #fff;
+            transform: translateX(0);
+        }
     }
 }
 
